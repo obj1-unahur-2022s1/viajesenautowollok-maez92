@@ -1,0 +1,136 @@
+import remiseras.*
+import clientes.*
+
+			//// Viaje de 10 Kilometros ////
+// Pruebas en Roxana
+test "Roxana le cobra 180 pesos a Ludmila por un viaje de 10 km" {
+	assert.equals(180,roxana.precioViaje(ludmila,10))
+}
+
+test "Roxana le cobra 300 pesos a Ana Maria por un viaje de 10 km" {
+	assert.equals(300,roxana.precioViaje(anaMaria,10))
+}
+
+test "Roxana le cobra 220 pesos a Teresa por un viaje de 10 km" {
+	assert.equals(220,roxana.precioViaje(teresa,10))
+}
+
+// Pruebas en Gabriela
+test "Gabriela le cobra 216 pesos a Ludmila por un viaje de 10 km" {
+	assert.equals(216,gabriela.precioViaje(ludmila,10))
+}
+
+test "Gabriela le cobra 360 pesos a Ana Maria por un viaje de 10 km" {
+	assert.equals(360,gabriela.precioViaje(anaMaria,10))
+}
+
+test "Gabriela le cobra 264 pesos a Teresa por un viaje de 10 km" {
+	assert.equals(264,gabriela.precioViaje(teresa,10))
+}
+
+// Pruebas a Mariela
+test "Mariela le cobra 180 pesos a Ludmila por un viaje de 10 km" {
+	assert.equals(180,mariela.precioViaje(ludmila,10))
+}
+
+test "Mariela le cobra 300 pesos a Ana Maria por un viaje de 10 km" {
+	assert.equals(300,mariela.precioViaje(anaMaria,10))
+}
+
+test "Mariela le cobra 220 pesos a Teresa por un viaje de 10 km" {
+	assert.equals(220,mariela.precioViaje(teresa,10))
+}
+
+// Pruebas a Juana
+test "Juana le cobra 200 pesos a Ludmila por un viaje de 10 km" {
+	assert.equals(200,juana.precioViaje(ludmila,10))
+}
+
+test "Juana le cobra 200 pesos a Ana Maria por un viaje de 10 km" {
+	assert.equals(200,juana.precioViaje(anaMaria,10))
+}
+
+test "Juana le cobra 200 pesos a Teresa por un viaje de 10 km" {
+	assert.equals(200,juana.precioViaje(teresa,10))
+}
+
+			//// Viaje de 2 Kilometros ////
+// Pruebas en Roxana
+test "Roxana le cobra 36 pesos a Ludmila por un viaje de 2 km" {
+	assert.equals(36,roxana.precioViaje(ludmila,2))
+}
+
+test "Roxana le cobra 60 pesos a Ana Maria por un viaje de 2 km" {
+	assert.equals(60,roxana.precioViaje(anaMaria,2))
+}
+
+test "Roxana le cobra 44 pesos a Teresa por un viaje de 2 km" {
+	assert.equals(44,roxana.precioViaje(teresa,2))
+}
+
+// Pruebas en Gabriela
+test "Gabriela le cobra 43.20 pesos a Ludmila por un viaje de 2 km" {
+	assert.equals(43.20,gabriela.precioViaje(ludmila,2))
+}
+
+test "Gabriela le cobra 72 pesos a Ana Maria por un viaje de 2 km" {
+	assert.equals(72,gabriela.precioViaje(anaMaria,2))
+}
+
+test "Gabriela le cobra 52.80 pesos a Teresa por un viaje de 2 km" {
+	assert.equals(52.80,gabriela.precioViaje(teresa,2))
+}
+
+// Pruebas a Mariela
+test "Mariela le cobra 50 pesos a Ludmila por un viaje de 2 km" {
+	assert.equals(50,mariela.precioViaje(ludmila,2))
+}
+
+test "Mariela le cobra 60 pesos a Ana Maria por un viaje de 2 km" {
+	assert.equals(60,mariela.precioViaje(anaMaria,2))
+}
+
+test "Mariela le cobra 50 pesos a Teresa por un viaje de 2 km" {
+	assert.equals(50,mariela.precioViaje(teresa,2))
+}
+
+// Pruebas a Juana
+test "Juana le cobra 100 pesos a Ludmila por un viaje de 2 km" {
+	assert.equals(100,juana.precioViaje(ludmila,2))
+}
+
+test "Juana le cobra 100 pesos a Ana Maria por un viaje de 2 km" {
+	assert.equals(100,juana.precioViaje(anaMaria,2))
+}
+
+test "Juana le cobra 100 pesos a Teresa por un viaje de 2 km" {
+	assert.equals(100,juana.precioViaje(teresa,2))
+}
+
+// Pruebas a Lucia (reemplazando a Mariela) con cadeta Melina (cadeta de Ludmila)
+
+test "Lucia (x Mariela) le cobra 150 pesos a Melina (x Ludmila) por un viaje de 10 km" {
+	lucia.estaReemplazandoA(mariela)
+	melina.trabajarPara(ludmila)
+	assert.equals(150,lucia.precioViaje(melina,10))
+}
+
+test "Lucia (x Mariela) le cobra 50 pesos a Melina (x Ludmila) por un viaje de 1 km" {
+	lucia.estaReemplazandoA(mariela)
+	melina.trabajarPara(ludmila)
+	assert.equals(50,lucia.precioViaje(melina,1))
+}
+
+// Pruebas a Lucia (reemplazando a Gabriela) con cadeta Melina (cadeta de Ludmila)
+
+test "Lucia (x Gabriela) le cobra 180 pesos a Melina (x Ludmila) por un viaje de 10 km" {
+	lucia.estaReemplazandoA(gabriela)
+	melina.trabajarPara(ludmila)
+	assert.equals(180,lucia.precioViaje(melina,10))
+}
+
+test "Lucia (x Gabriela) cobra 50 pesos a Melina (x Ludmila) por un viaje de 1 km" {
+	lucia.estaReemplazandoA(gabriela)
+	melina.trabajarPara(ludmila)
+	assert.equals(18,lucia.precioViaje(melina,1))
+}
