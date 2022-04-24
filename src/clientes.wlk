@@ -6,9 +6,14 @@ object ludmila {  //Cliente
 }
 
 object anaMaria {
-	const precioPactado = 30
+	var estaEstableEconomicamente = true
 	method precioPorKm() {
-		return precioPactado
+		if (estaEstableEconomicamente) {
+			return 30
+		}
+		else {
+			return 25
+		}
 	}
 }
 
